@@ -10,14 +10,6 @@ describe('function console.log', () => {
     });
     func(mock);
   });
-  test('should not have been called with node', (done) => {
-    console.log = jest.fn(console.log);
-    const mock = jest.fn(() => {
-      expect(console.log).not.toHaveBeenCalledWith('NODE');
-      done();
-    });
-    func(mock);
-  });
 });
 
 describe('function verify', () => {
