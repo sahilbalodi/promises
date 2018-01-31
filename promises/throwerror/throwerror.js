@@ -1,11 +1,11 @@
 function parsePromised(jsonString) {
   const promise1 = new Promise((resolve, reject) => {
     try {
-      JSON.parse(jsonString);
+      const parsedObject = JSON.parse(jsonString);
+      resolve(parsedObject);
     } catch (e) {
       reject(e);
     }
-    resolve(JSON.parse(jsonString));
   });
   return promise1;
 }
