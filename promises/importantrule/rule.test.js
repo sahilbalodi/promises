@@ -24,4 +24,10 @@ describe('function verify', () => {
   test('shoule return true if number is passed to it', () => {
     expect(verify(-Infinity)).toBe(null);
   });
+  test('shoule return true if number is passed to it', () => {
+    expect(verify()).toBe(null);
+  });
+  test('shoule return true if number is passed to it', () => {
+    expect(null).toBe(null);
+  });
 });
