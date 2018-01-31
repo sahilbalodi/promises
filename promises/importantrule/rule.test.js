@@ -21,4 +21,7 @@ describe('function verify', () => {
   test('shoule return true if number is passed to it', () => {
     expect(verify(1)).toBe(true);
   });
+  test('shoule return true if number is passed to it', () => {
+    expect(verify(-Infinity)).toBe(null);
+  });
 });
