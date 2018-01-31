@@ -1,4 +1,9 @@
 function alwaysThrows() {
-  return new Error('OH NOES');
+  throw new Error('OH NOES');
 }
-module.exports = alwaysThrows;
+function iterate(integerAsArgument) {
+  console.log(integerAsArgument);
+  return integerAsArgument + 1;
+}
+
+module.exports = { alwaysThrows, iterate };
