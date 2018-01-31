@@ -8,3 +8,12 @@ describe('function alwaysThrows', () => {
     expect(objectReturned.alwaysThrows()).toBeInstanceOf(Error);
   });
 });
+
+describe('function iterate', () => {
+  test('shoule return number one greater than arguemnt passed to it', () => {
+    expect(objectReturned.iterate(1)).toBe(2);
+  });
+  test('shoule return number one greater than arguemnt passed to it for negative numbers', () => {
+    expect(objectReturned.iterate(-1)).toBe(0);
+  });
+});
