@@ -39,4 +39,11 @@ describe('function promiseFunc', () => {
     }
     objectReturned.promiseFunc(callback);
   });
+  test('should throw Error', (done) => {
+    function callback(error) {
+      expect(error.message).toBe('OH NOES');
+      done();
+    }
+    objectReturned.promiseFunc(callback);
+  });
 });
