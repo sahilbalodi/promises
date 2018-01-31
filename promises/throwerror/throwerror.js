@@ -9,4 +9,5 @@ function parsePromised(jsonString) {
   });
   return promise1;
 }
+console.log(parsePromised());
 module.exports = parsePromised;

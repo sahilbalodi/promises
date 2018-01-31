@@ -3,10 +3,10 @@ const verify = require('./verify.js');
 
 describe('function alwaysThrows', () => {
   test('shoule return error with message OH NOES', () => {
-    expect(objectReturned.alwaysThrows().message).toBe('OH NOES');
+    expect(() => { objectReturned.alwaysThrows(); }).toThrow();
   });
   test('shoule return error with message OH NOES', () => {
-    expect(objectReturned.alwaysThrows()).toBeInstanceOf(Error);
+    expect(() => { objectReturned.alwaysThrows(); }).toThrowError('OH NOES');
   });
 });
 describe('function iterate', () => {
@@ -20,17 +20,5 @@ describe('function iterate', () => {
 describe('function verify', () => {
   test('shoule return true if number is passed to it', () => {
     expect(verify(1)).toBe(true);
-  });
-  test('shoule return null if number is  not passed to it', () => {
-    expect(verify()).toBe(null);
-  });
-  test('shoule return null if infinity is passed to it', () => {
-    expect(verify(Infinity)).toBe(null);
-  });
-  test('shoule return null if null is passed to it', () => {
-    expect(verify(null)).toBe(null);
-  });
-  test('shoule return null if null is passed to it', () => {
-    expect(verify(-Infinity)).toBe(null);
   });
 });
